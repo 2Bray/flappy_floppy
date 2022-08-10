@@ -70,6 +70,8 @@ public class TapController : MonoBehaviour {
 
 			}
 
+		if (transform.position.y > 4.6f) transform.position = new Vector3(transform.position.x, 4.6f, transform.position.z);
+
 		transform.rotation = Quaternion.Lerp (transform.rotation, downrotation, tiltSmooth * Time.deltaTime);
 	
 	
