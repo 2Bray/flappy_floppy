@@ -66,7 +66,6 @@ public class Parallaxer : MonoBehaviour {
 		}		
 		if (spawnImmediate) {
 			SpawnImmediate ();
-
 		}
 	
 	}

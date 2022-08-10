@@ -10,10 +10,10 @@ public class GameManager : MonoBehaviour {
 
 	public static GameManager Instance;
 
-	public GameObject startPage;
-	public GameObject gameOverPage;
-	public GameObject countdownPage;
-	public Text scoreText;
+	[SerializeField] private GameObject startPage;
+	[SerializeField] private GameObject gameOverPage;
+	[SerializeField] private GameObject countdownPage;
+	[SerializeField] private Text scoreText;
 
 	enum PageState{
 		None,
@@ -22,13 +22,12 @@ public class GameManager : MonoBehaviour {
 		Countdown
 	}
 
-	int score = 0;
-	bool gameOver = true;
+	private int score = 0;
+	private bool gameOver = true;
 
 	public bool GameOver { get { return gameOver; } }
 
 	void Awake(){
-	
 		Instance = this;
 	}
 
@@ -51,7 +50,6 @@ public class GameManager : MonoBehaviour {
 		OnGameStarted ();
 		score = 0;
 		gameOver = false;
-	
 	}
 
 	void OnPlayerDied(){
